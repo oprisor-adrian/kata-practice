@@ -1,11 +1,10 @@
 
-# kata-practice
+## Kata ractice
 
-___
 Description
 
-<h3 style="text-align: center;">Table of content</h3>
+#### Table of content
 
 | Kata      | Description                                                 |
 | :-------- | :---------------------------------------------------------- |
-| [kata-00](./kata-00/README.md) | Create an algorithm that moves all the zeros to the end of the array|
+| [kata-00](./kata-00/) | Create an algorithm that moves all the zeros to the end of the array.|
