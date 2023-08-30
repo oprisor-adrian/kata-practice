@@ -7,3 +7,7 @@ add_executable(${CMAKE_PROJECT_NAME}
   main.cpp
   src/rail_cipher.cpp
 )
+add_library(${CMAKE_PROJECT_NAME}_lib
+  src/rail_cipher.cpp
+)
+add_subdirectory(test)

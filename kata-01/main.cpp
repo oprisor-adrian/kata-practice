@@ -3,6 +3,7 @@
 #include "rail_cipher.h"
 
 int main() {
-  std::cout << RailFenceCipher::Encode("testTEXT", 3);
+  std::cout << "encoding: " << RailFenceCipher::Encode("TEST", 2) << std::endl;
+  std::cout << "decoding: " << RailFenceCipher::Decode("TSET", 2) << std::endl;
   return 0;
 }
