@@ -14,7 +14,7 @@ W       E       E
 
 Output:
 ```
-WERERHRAE
+WEEERHRAE
 ```
 
 #### DOC
