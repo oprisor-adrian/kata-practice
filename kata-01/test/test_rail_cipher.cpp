@@ -20,10 +20,11 @@ TEST(TestRailFenceCipher, TestEncode) {
   }
 }
 
-TEST(TestRailFenceCipher, TestDecode) {
+TEST(TestRailFenceCipher, TestDecodePerfectLength) {
   TestCase test_cases[] = {
     {"TSET", "TEST", 2},
-    {"WECRLTEERDSOEEFEAOCAIVDEN", "WEAREDISCOVEREDFLEEATONCE", 3}};
+    {"WEBERTEETAHS", "WEARETHEBEST", 3},
+    {"Hetor  o?wayudy oa", "How are you today?", 4}};
   for (const auto& test_case : test_cases) {
     std::string output = RailFenceCipher::Decode(test_case.input, test_case.rails_number);
     EXPECT_STREQ(output.c_str(), test_case.expected_output.c_str());

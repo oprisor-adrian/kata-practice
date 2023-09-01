@@ -3,6 +3,6 @@
 #include "rail_cipher.h"
 
 int main() {
-  std::cout << "encoding: " << RailFenceCipher::Encode("WEAREDISCOVEREDRUNATONCE", 6) << std::endl;
+  std::cout << "Decoding process:\n" << RailFenceCipher::Decode("TMOETYNLGSKA", 3) << std::endl;
   return 0;
 }
