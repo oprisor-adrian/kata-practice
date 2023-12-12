@@ -1,11 +1,13 @@
 #include "caesar_cipher.h"
 
+#include <cctype>
+
 namespace Cipher {
 
 namespace {
 
 int getRange(char c) {
-  if (c >= 'A' && c <= 'Z') {
+  if (std::isupper(c)) {
     return 65;
   }
   return 97;
@@ -19,7 +21,7 @@ std::string Caesar::Encrypt(const std::string& plain_text, const int key) {
   std::string cipher_text;
   for (char c: plain_text) {
     // Checks if the character is a letter from alphabet
-    if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z') {
+    if (std::isalpha(c)) {
       // Adds the encrypted character to the string
       int range = getRange(c);
       cipher_text += (c + key - range) % alphabet_length_ + range;
@@ -34,7 +36,7 @@ std::string Caesar::Encrypt(const std::string& plain_text, const int key) {
 std::string Caesar::Decrypt(const std::string& cipher_text, const int key) {
   std::string plain_text;
   for (char c : cipher_text) {
-    if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z') {
+    if (std::isalpha(c)) {
       // Adds the encrypted character to the string
       int range = getRange(c);
       plain_text += (c - key + alphabet_length_ - range) % 
