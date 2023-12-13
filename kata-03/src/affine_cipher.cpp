@@ -1,4 +1,4 @@
-#include "../include/afile_cipher.h"
+#include "../include/affine_cipher.h"
 
 #include <iostream>
 #include <stdexcept>
@@ -17,9 +17,9 @@ int getRange(char c) {
 
 }  // namespace 
 
-Afile::Afile(const int length): length_(length) {}
+Affine::Affine(const int length): length_(length) {}
 
-std::string Afile::Encrypt(const std::string& plain_text, const Key key) {
+std::string Affine::Encrypt(const std::string& plain_text, const Key key) {
   if (!IsPrim(key.key_1)) {
     throw std::invalid_argument("Prima cheie trebuie sa fie prim in lung. mult. 26");
   }
@@ -35,7 +35,7 @@ std::string Afile::Encrypt(const std::string& plain_text, const Key key) {
   return cipher_text;
 }
 
-std::string Afile::Decrypt(const std::string& cipher_text, const Key key) {
+std::string Affine::Decrypt(const std::string& cipher_text, const Key key) {
   if (!IsPrim(key.key_1)) {
     throw std::invalid_argument("Prima cheie trebuie sa fie prim in lungimea "
                                 "multimii alfabetului.");
@@ -59,7 +59,7 @@ std::string Afile::Decrypt(const std::string& cipher_text, const Key key) {
   return plain_text;
 }
 
-bool Afile::IsPrim(const int key) {
+bool Affine::IsPrim(const int key) {
   if (key < 2 || key > 26)
     return false;
   if (key == 2 || key == 3)
@@ -73,7 +73,7 @@ bool Afile::IsPrim(const int key) {
   return true;
 }
 
-int Afile::KeyInverse(const int key) {
+int Affine::KeyInverse(const int key) {
   int index = 1;
   while (index*key%length_!=1) {
     index ++;

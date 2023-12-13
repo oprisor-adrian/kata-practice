@@ -10,9 +10,9 @@ struct Key {
   int key_2;
 };
 
-class Afile{
+class Affine{
   public:
-    Afile(const int length_);
+    Affine(const int length_);
     std::string Encrypt(const std::string& plain_text, const Key key);
     std::string Decrypt(const std::string& cipher_text, const Key key);
   private:
