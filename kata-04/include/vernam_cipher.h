@@ -17,8 +17,9 @@ class Vernam {
     std::vector<bool> Ascii2Bites(std::uint8_t character);
     std::uint8_t Bites2Ascii(std::vector<bool> bites);
     std::vector<std::vector<bool>> GetBitsMatrix(const std::string& stream);
-    std::vector<std::vector<bool>> XorMatrix(std::vector<std::vector<bool>> plain_matrix,
-                                             std::vector<std::vector<bool>> key_matrix);
+    std::vector<std::vector<bool>> XorMatrix(
+        std::vector<std::vector<bool>> plain_matrix,
+        std::vector<std::vector<bool>> key_matrix);
 };
 
 }  // namesapce Cipher
