@@ -5,10 +5,11 @@
 int main() {
   Cipher::Vernam vernam;
   std::cout << "Encrypt: " 
-            << vernam.Encrypt("abcd", "1234") 
+            << vernam.Encrypt("Crypto is cool!", "123411:51:23126") 
             << std::endl;
   std::cout << "Decrypt: " 
-            << vernam.Decrypt(vernam.Encrypt("abcd", "1234"), "1234") 
+            << vernam.Decrypt(vernam.Encrypt("Crypto is cool!", 
+                              "123411:51:23126"), "123411:51:23126")
             << std::endl;
   return 0;
 }
