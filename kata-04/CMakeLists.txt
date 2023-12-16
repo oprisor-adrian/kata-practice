@@ -6,3 +6,8 @@ add_executable(${CMAKE_PROJECT_NAME}
   main.cpp
   src/vernam_cipher.cpp
 )
+add_library(${CMAKE_PROJECT_NAME}_lib
+  main.cpp
+  src/vernam_cipher.cpp
+)
+add_subdirectory(test/)
