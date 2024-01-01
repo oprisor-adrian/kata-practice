@@ -12,3 +12,4 @@ C++ Kata practice
 | [kata-02](./kata-02/) | Implement the Caesar cipher.|
 | [kata-03](./kata-03)  | Implement the Affine cipher.|
 | [kata-04](./kata-04)  | Implement the Vernam cipher.|
+| [kata-05](./kata-05)  | Create an application that can parse a grammar. (Formal Languages)|
